@@ -1,0 +1,115 @@
+.form_con {
+  /* background-color: #e3e3e3; */
+  height: 100vh;
+  position: relative;
+  background-image: url("../../assets/login.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  background-color: #fff;
+  padding: 50px;
+  box-shadow: 0px 0px 4px inset #000;
+  animation: curve;
+  animation-timing-function: linear;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes curve {
+  0% {
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  100% {
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+}
+
+form h2,
+form p {
+  text-align: center;
+  margin: 5px 0;
+}
+.input_group {
+  margin: 20px 0;
+  position: relative;
+}
+.input_group label {
+  display: block;
+  font-size: 1rem;
+  padding-bottom: 2px;
+}
+.input_group input {
+  display: block;
+  width: 100%;
+  padding: 5px 20px;
+  font-size: 1.2rem;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  outline: none;
+  border: 1px solid #000;
+}
+.input_group i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  font-size: 0.8rem;
+}
+
+.submit_group {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.submit_group input {
+  font-size: 1.3rem;
+  padding: 5px;
+  outline: none;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: #e3e3e3;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.submit_group input:hover {
+  background-color: transparent;
+}
+textarea {
+  width: 100%;
+  margin-top: 5px;
+  resize: none;
+  height: 100px;
+  outline: none;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 5px inset darkgreen;
+  margin-right: 10px;
+  animation: rotate;
+  animation-timing-function: linear;
+  animation-duration: 0.3s;
+  animation-iteration-count: infinite;
+}
+.hide_spinner {
+  display: none;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
