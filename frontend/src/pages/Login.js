@@ -83,22 +83,22 @@ const Login = () => {
     // }
 
     try {
-      let res = await fetch("http://localhost:4000/auth/login", {
+      let res = await fetch("https://carton.onrender.com/auth/login", {
         method: "POST",
         body: JSON.stringify(userInfo),
         headers: {
-          'content-type' : 'application/json'
-        }
+          "content-type": "application/json",
+        },
       });
 
       let response = await res.json();
       msg.textContent = response.message;
 
       if (response.status) {
-        localStorage.setItem('token', response.token);
+        localStorage.setItem("token", response.token);
         msg.style.color = "green";
         setTimeout(() => {
-          login()
+          login();
           spinner.classList.add("form_hide_spinner__dKWth");
         }, 500);
       } else {

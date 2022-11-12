@@ -127,7 +127,7 @@ const Signup = () => {
       formData.append(key, userInfo[key]);
     }
     try {
-      let res = await fetch("http://localhost:4000/auth/signup", {
+      let res = await fetch("https://carton.onrender.com/auth/signup", {
         method: "POST",
         body: formData,
       });

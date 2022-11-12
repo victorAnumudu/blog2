@@ -10,14 +10,11 @@ const { userInfo } = require("os");
 
 exports.handleSignup = async (req, res) => {
   req.body.password = bcrypt.hashSync(req.body.password); // hashing user password
+
+  // const url =req.protocol +"://" +req.hostname +":" +4000 +"/static/post/" +req.file.filename;
   const url =
-    req.protocol +
-    "://" +
-    req.hostname +
-    ":" +
-    4000 +
-    "/static/" +
-    req.file.filename;
+    req.protocol + "://" + req.hostname + "/static/post/" + req.file.filename;
+
   req.body.image = url;
   // user to add to database
   const userInfo = {

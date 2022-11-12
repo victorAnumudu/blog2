@@ -17,7 +17,7 @@ const Delete = () => {
 
   useEffect(() => {
     let getPost = async () => {
-      let res = fetch(`http://localhost:4000/post/post/${postId}`, {
+      let res = fetch(`https://carton.onrender.com/post/post/${postId}`, {
         method: "GET",
         headers: {
           authorization: localStorage.getItem("token"),
@@ -43,13 +43,16 @@ const Delete = () => {
     spinner.classList.remove("form_hide_spinner__dKWth");
 
     try {
-      let res = await fetch(`http://localhost:4000/post/delete/${postId}`, {
-        method: "DELETE",
-        headers: {
-          authorization: localStorage.getItem("token"),
-          "content-type": "application/json",
-        },
-      });
+      let res = await fetch(
+        `https://carton.onrender.com/post/delete/${postId}`,
+        {
+          method: "DELETE",
+          headers: {
+            authorization: localStorage.getItem("token"),
+            "content-type": "application/json",
+          },
+        }
+      );
 
       let response = await res.json();
       msg.textContent = response.message;

@@ -64,7 +64,7 @@ const Post = (e) => {
       formData.append(key, userInfo[key]);
     }
     try {
-      let res = await fetch("http://localhost:4000/post/post", {
+      let res = await fetch("https://carton.onrender.com/post/post", {
         method: "POST",
         body: formData,
         headers: {

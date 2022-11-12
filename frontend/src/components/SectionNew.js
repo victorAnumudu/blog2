@@ -20,7 +20,7 @@ const SectionNew = () => {
 
   useEffect(() => {
     let getPost = async () => {
-      let res = fetch("http://localhost:4000/post/post", {
+      let res = fetch("https://carton.onrender.com/post/post", {
         method: "GET",
         headers: {
           "content-type": "application/json",
@@ -37,7 +37,7 @@ const SectionNew = () => {
   // function to change active sort button when user click on any button to sort
   let onSort = async (e) => {
     let name = e.target.name;
-    let res = fetch("http://localhost:4000/post/post", {
+    let res = fetch("https://carton.onrender.com/post/post", {
       method: "GET",
       headers: {
         "content-type": "application/json",

@@ -12,16 +12,16 @@ const NavbarProfile = () => {
   //hook to update userImage
   useEffect(() => {
     let getUser = async () => {
-      let res = fetch("http://localhost:4000/auth/user", {
+      let res = fetch("https://carton.onrender.com/auth/user", {
         method: "GET",
         headers: {
           authorization: localStorage.getItem("token"),
         },
       });
       let result = await res;
-      let response = await result.json()
-      if(response.status){
-        setUserImage(response.message.image)
+      let response = await result.json();
+      if (response.status) {
+        setUserImage(response.message.image);
       }
     };
     getUser();
