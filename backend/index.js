@@ -38,4 +38,8 @@ app.use("/post", postRouter); // handling post specific request
 // app.get("/", getUser);
 
 // starting server
-app.listen(port, () => console.log(`Server listening on port ${port}`));
+app.listen(port, () =>
+  console.log(
+    `Server listening on port ${port} and your env is ${process.env.NODE_ENV === 'production'}`
+  )
+);
