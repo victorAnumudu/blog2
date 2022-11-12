@@ -1,4 +1,4 @@
-
+import React from "react";
 // importing routes
 import Restricted from "./routes/Restricted";
 // import Unrestricted from "./routes/Unrestricted";
