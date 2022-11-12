@@ -13,7 +13,7 @@ exports.handleSignup = async (req, res) => {
 
   // const url =req.protocol +"://" +req.hostname +":" +4000 +"/static/post/" +req.file.filename;
   const url =
-    req.protocol + "://" + req.hostname + "/static/post/" + req.file.filename;
+    req.protocol + "://" + req.hostname + "/static/" + req.file.filename;
 
   req.body.image = url;
   // user to add to database
